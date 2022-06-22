@@ -1,0 +1,21 @@
+AN_HENG_CLOUD:
+    host: 'http://10.50.27.166'
+    headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+
+    # 登陆接口
+    an_heng_cloud_login:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/uaa/oauth/manage/login2fa'
+
+    # 应急漏洞报告
+    emergency_vulnerability_report:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: ':9080/subscription-service/api/subscription/service/report/input/iomp'
