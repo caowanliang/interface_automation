@@ -1,0 +1,21 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Wed Sep 28 11:12:32 CST 2022","Wed Sep 28 11:12:32 CST 2022","46","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_report[date2]","
+        服务报告-生成报告
+        :param login_mss: token值
+        :return:
+        "
+"passed","Wed Sep 28 11:12:31 CST 2022","Wed Sep 28 11:12:31 CST 2022","71","testcase.test_mss.test_mss_data_subscription","test_data_subscription","TestDataSubscription","","","test_mss_people_read_the_report","
+        人读报告-应急漏洞报告发送
+        :param login_mss: token值
+        :return:
+        "
+"failed","Wed Sep 28 11:12:32 CST 2022","Wed Sep 28 11:12:32 CST 2022","77","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_report[date0]","
+        服务报告-生成报告
+        :param login_mss: token值
+        :return:
+        "
+"failed","Wed Sep 28 11:12:32 CST 2022","Wed Sep 28 11:12:32 CST 2022","47","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_report[date1]","
+        服务报告-生成报告
+        :param login_mss: token值
+        :return:
+        "

@@ -1,0 +1,37 @@
+MSS:
+    host: 'http://10.50.27.166'
+    headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+
+    # 登陆接口
+    mss_login:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/uaa/oauth/manage/login2fa'
+
+    # 报告中心-服务报告-生成报告
+    create_report:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/subscription-service/api/subscription/service/history/report/record/create'
+
+    # 服务中心-历史报告-历史报告列表
+    history_report_list:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/subscription-service/api/subscription/service/history/report/record/list'
+
+    # 应急漏洞报告
+    emergency_vulnerability_report:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: ':9080/subscription-service/api/subscription/service/report/input/iomp'

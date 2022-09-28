@@ -20,8 +20,7 @@ class ReadFile(object):
         return cls._instance
 
     def __init__(self):
-        self.mss_yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config/mss_date/mss_date.yaml')
-        self.an_heng_cloud_yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config/an_heng_cloud/an_heng_cloud.yaml')
+        self.mss_yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config/mss/mss_conf.yaml')
 
     def read_yaml(self, path_type):
         """
@@ -31,8 +30,6 @@ class ReadFile(object):
         try:
             if path_type == 'MSS':
                 file_path = self.mss_yaml_path
-            elif path_type == 'AN_HENG_CLOUD':
-                file_path = self.an_heng_cloud_yaml_path
 
             with open(file_path, 'r', encoding='utf-8') as f:
                 return yaml.load(f.read(), Loader=yaml.Loader)

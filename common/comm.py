@@ -3,11 +3,8 @@
 # @Time  : 2022/5/16 14:47
 # @Author: william.cao
 # @File  : comm.py
-import os
 import random
-
-import jinja2
-import yaml
+import time
 
 from common.read_file import ReadFile
 
@@ -39,6 +36,10 @@ def to_obtain_url_param_method(saas_type, api_name, api, token):
 
 
 def random_phone():
+    """
+    随机生成一个电话号码
+    :return:
+    """
     pre_list = ["130", "131", "132", "133", "134", "135", "136", "137", "138", "139", "147", "150", "151", "152",
                 "153", "155", "156", "157", "158", "159", "186", "187", "188"]
     random_pre = random.choice(pre_list)
@@ -47,5 +48,16 @@ def random_phone():
     return str(phone_num)
 
 
+def get_time_stamp():
+    """
+    获取当前时间的毫秒级
+    :return:
+    """
+    t = time.time()
+    # 毫秒级时间戳
+    now_time = lambda: int(round(t * 1000))
+    return now_time()
+
+
 if __name__ == '__main__':
-    print(random_phone())
+    print(get_time_stamp())

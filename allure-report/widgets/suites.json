@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"9b984b8fa8fecee843fde04ce5303ec5","name":"testcase.test_mss.test_mss_report_center","statistic":{"failed":3,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":3}},{"uid":"c274eb65ca3a3a267e31019372c6273e","name":"testcase.test_mss.test_mss_data_subscription","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
