@@ -6,7 +6,7 @@
 
 import requests
 import urllib3 as urllib3
-from common.log import Log
+from comm.log import Log
 
 
 class RunMethod:

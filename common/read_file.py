@@ -7,7 +7,7 @@
 import os
 import xlrd
 import yaml
-from common.log import Log
+from comm.log import Log
 
 
 class ReadFile(object):
@@ -20,7 +20,7 @@ class ReadFile(object):
         return cls._instance
 
     def __init__(self):
-        self.mss_yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config/mss/mss_conf.yaml')
+        self.mss_yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config/mss/mss_api.yaml')
 
     def read_yaml(self, path_type):
         """

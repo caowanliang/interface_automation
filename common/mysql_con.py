@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 # @Time  : 2022/7/21 17:05
 # @Author: william.cao
-# @File  : mysql_connection.py
+# @File  : mysql_con.py
 # !@Desc : 数据库连接池相关
 
 
@@ -14,7 +14,7 @@ import configparser
 # 读取数据库配置信息
 
 config = configparser.ConfigParser()
-config.read('/config/mss_mysql/mss_db.conf', encoding='UTF-8')
+config.read('/Users/caowanliang/Mss_Interface_Automation/config/config.ini', encoding='UTF-8')
 sections = config.sections()
 # 数据库工厂
 dbFactory = {}
@@ -40,7 +40,6 @@ for dbName in sections:
                               password=password,
                               database=database)
     dbFactory[dbName] = databasePooled
-
 
 class MySQLConnection(object):
     """
@@ -219,3 +218,4 @@ class MySQLConnection(object):
 
 if __name__ == '__main__':
     connect = MySQLConnection()
+    print(connect)
