@@ -184,42 +184,44 @@ class TestReportCenterServiceReport(object):
         assert select_subscribe_report_result.json()['data'][0]['enable'] == 0
 
 
-    @allure.story("服务报告-订阅报告生成后审核发送")
-    @allure.severity("blocker")
-    @allure.testcase("测试用例的禅道链接地址_例子")
-    @pytest.mark.usefixtures('add_and_delete_subscribe_report')
-    def test_mss_service_report_audit_subscribe_report(self, add_and_delete_subscribe_report, login_mss):
-        """
-        1.生成订阅报告（启用状态为打开）
-        2.链接数据库修改发送时间为当天
-        3.历史报告列表生成审核数据
-        4.登陆运营人员账号通过审核并发送
-        5.删除发送的订阅报告
-        6.删除订阅
-        :param add_and_delete_subscribe_report: 新增订阅报告的id值
-        :param login_mss: token值
-        :return:
-        """
-        # 生成下次发送订阅报告时间
-        next_send_time = datetime.strptime(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '%Y-%m-%d %H:%M:%S')
-        # 链接数据库
-        mysql_conn = MySQLConnection()
-        values = {"time": next_send_time, "id": int(add_and_delete_subscribe_report)}
+    # @allure.story("服务报告-订阅报告生成后审核发送")
+    # @allure.severity("blocker")
+    # @allure.testcase("测试用例的禅道链接地址_例子")
+    # @pytest.mark.usefixtures('add_and_delete_subscribe_report')
+    # def test_mss_service_report_audit_subscribe_report(self, add_and_delete_subscribe_report, login_mss):
+    #     """
+    #     1.生成订阅报告（启用状态为打开）
+    #     2.链接数据库修改发送时间为当天
+    #     3.历史报告列表生成审核数据
+    #     4.登陆运营人员账号通过审核并发送
+    #     5.删除发送的订阅报告
+    #     6.删除订阅
+    #     :param add_and_delete_subscribe_report: 新增订阅报告的id值
+    #     :param login_mss: token值
+    #     :return:
+    #     """
+    #     # 生成下次发送订阅报告时间
+    #     next_send_time = datetime.strptime(datetime.now().strftime('%Y-%m-%d %H:%M:%S'), '%Y-%m-%d %H:%M:%S')
+    #     # 链接数据库
+    #     mysql_conn = MySQLConnection()
+    #     values = {"time": next_send_time, "id": int(add_and_delete_subscribe_report)}
+    #
+    #     # 修改数据库下次发送时间
+    #     update_sql = mysql_conn.execute("UPDATE report_subscribe SET next_send_time=%(time)s WHERE id=%(id)s", param=values)
+    #     time.sleep(1)
+    #     mysql_conn.commit()
+    #     mysql_conn.close()
+    #
+    #     # 校验生成待审核的报告
+    #     print(update_sql)
 
-        # 修改数据库下次发送时间
-        update_sql = mysql_conn.execute("UPDATE report_subscribe SET next_send_time=%(time)s WHERE id=%(id)s", param=values)
-        time.sleep(1)
-        mysql_conn.commit()
-        mysql_conn.close()
-        print(update_sql)
-
-    def test_delete(self, login_mss):
-        api_date = to_obtain_url_param_method(saas_type='MSS', api_name='report_record_remove_by_ids', api='api',
-                                              token=login_mss)
-        report_delete_result = self.mss_request.run_main(method=api_date['method'],
-                                                         url=api_date['url'] + '21193',
-                                                         json={}, headers=api_date['headers'])
-        assert report_delete_result.json()['message'] == 'RESPONSE_OK'
+    # def test_delete(self, login_mss):
+    #     api_date = to_obtain_url_param_method(saas_type='MSS', api_name='report_record_remove_by_ids', api='api',
+    #                                           token=login_mss)
+    #     report_delete_result = self.mss_request.run_main(method=api_date['method'],
+    #                                                      url=api_date['url'] + '21193',
+    #                                                      json={}, headers=api_date['headers'])
+    #     assert report_delete_result.json()['message'] == 'RESPONSE_OK'
 
 if __name__ == "__main__":
     pass
