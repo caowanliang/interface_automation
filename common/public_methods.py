@@ -9,9 +9,11 @@ import json
 import os
 import random
 import time
-from comm.read_file import ReadFile
-from conftest import log
 
+from common.log import Log
+from common.read_file import ReadFile
+
+log = Log()
 
 def to_obtain_url_param_method(saas_type, api_name, api, token):
     """

@@ -12,21 +12,145 @@ MSS:
         Authorization: 'token'
       api: '/apiMSS/uaa/oauth/manage/login2fa'
 
-    # 报告中心-服务报告-生成报告
-    create_report:
+  # 退出登陆接口
+    mss_login_out:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/logout'
+
+#############################################  报告中心  #################################################
+
+    # 服务报告-生成报告
+    report_record_create:
       method: post
       headers:
         Content-Type: 'application/json'
         Authorization: 'token'
       api: '/apiMSS/subscription-service/api/subscription/service/history/report/record/create'
 
-    # 服务中心-历史报告-历史报告列表
-    history_report_list:
+    # 服务报告-新增订阅
+    report_subscribe_add:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/subscription-service/report/subscribe/add'
+
+    # 历史报告-历史报告列表
+    report_record_list:
       method: post
       headers:
         Content-Type: 'application/json'
         Authorization: 'token'
       api: '/apiMSS/subscription-service/api/subscription/service/history/report/record/list'
+
+    # 历史报告-删除报告
+    report_record_remove_by_ids:
+      method: get
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/subscription-service/api/subscription/service/history/report/record/removeByIds?ids='
+
+    # 历史报告-发送报告
+    report_record_send_report:
+      method: get
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/subscription-service/api/subscription/service/history/report/record/sendReport?id='
+
+    # 报告订阅-报告订阅列表
+    report_subscribe_page:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/subscription-service/report/subscribe/page'
+
+    # 报告订阅-删除订阅
+    report_subscribe_delete:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/subscription-service/report/subscribe/delete'
+
+  # 报告订阅-编辑订阅
+    report_subscribe_edit:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/subscription-service/report/subscribe/edit'
+
+  # 报告订阅-启用状态
+    report_subscribe_enable:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/subscription-service/report/subscribe/enable'
+
+#############################################  运营中心  #################################################
+
+  # 资产中心-资产列表
+    asset_page_list:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/asset-center/asset_center/asset/assetPageList'
+
+  # 资产中心-客户单位列表
+    asset_tenant_asset_count_page_list:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/asset-center/asset_center/asset/assetTenantAssetCountPageList'
+
+    # 资产中心-新增资产
+    asset_center_add:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/asset-center/asset_center/asset/add'
+
+    # 资产中心-删除资产
+    asset_center_delete:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/asset-center/asset_center/asset/delete'
+
+    # 资产中心_资产详情
+    asset_center_get_detail:
+      method: get
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/asset-center/asset_center/asset/getDetail?id='
+
+    # 资产中心_编辑资产
+    asset_center_update_one:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/asset-center/asset_center/asset/updateOne'
+
+    # 资产中心_批量编辑资产
+    asset_center_batch_update:
+      method: post
+      headers:
+        Content-Type: 'application/json'
+        Authorization: 'token'
+      api: '/apiMSS/asset-center/asset_center/asset/batchUpdate'
 
     # 应急漏洞报告
     emergency_vulnerability_report:

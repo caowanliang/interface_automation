@@ -1,0 +1,17 @@
+[{
+        "tenantId":"65089721",
+        "tenantName":"测试已开始单位",
+        "userInfoRequestList":[{"userId":"36729051",
+              "userName":"曹万亮",
+              "isPublicNumber":"true",
+              "isEmail":"true",
+              "tenantName":"测试已开始单位",
+              "tenantId":"65089721"}],
+        "statisticsStartTime":"2022-06-01",
+        "statisticsEndTime":"2022-08-31",
+        "reportFileType":"zip",
+        "typeId":"4",
+        "typeName":"暴露面管理报告",
+        "reportName":"DAS-MSS-暴露面报告_测试已开始单位客户",
+        "reportSendModeCodes":["1"]
+    }]

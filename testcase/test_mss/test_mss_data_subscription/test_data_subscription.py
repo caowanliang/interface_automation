@@ -4,11 +4,12 @@
 # @Author: william.cao
 # @File  : test_assets_list.py
 import os
+from datetime import datetime
 
 import allure
 import pytest
 
-from common.comm import to_obtain_url_param_method, get_time_stamp
+from common.public_methods import to_obtain_url_param_method, get_time_stamp
 from common.log import Log
 from common.request import RunMethod
 
@@ -26,14 +27,8 @@ class TestDataSubscription(object):
         """
         self.mss_request = RunMethod()
 
-    def teardown_class(self):
-        """
-        数据清理
-        :return:
-        """
-        pass
-
     @allure.story('数据订阅-人读报告')
+    @pytest.mark.skip
     def test_mss_people_read_the_report(self, login_mss):
         """
         人读报告-应急漏洞报告发送
@@ -57,6 +52,3 @@ class TestDataSubscription(object):
 
 if __name__ == "__main__":
     pytest.main(['-s', 'test_assets_list.py'])
-    # pytest /Users/caowanliang/cloud_line/testcase/test_mss/test_asset_management/test_assets_list.py --alluredir=./report/result
-    # allure serve ./report/result
-

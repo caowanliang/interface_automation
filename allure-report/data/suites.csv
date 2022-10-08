@@ -1,21 +1,64 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Wed Sep 28 11:12:32 CST 2022","Wed Sep 28 11:12:32 CST 2022","46","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_report[date2]","
-        服务报告-生成报告
+"failed","Thu Sep 29 17:21:53 CST 2022","Thu Sep 29 17:21:58 CST 2022","5274","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_send_mouth_report","
+        1.生成月报
+        2.发送月报
+        3.发送状态校验
+        4.删除报告
+        :param create_and_delete_report: 生成报告的id值
         :param login_mss: token值
         :return:
         "
-"passed","Wed Sep 28 11:12:31 CST 2022","Wed Sep 28 11:12:31 CST 2022","71","testcase.test_mss.test_mss_data_subscription","test_data_subscription","TestDataSubscription","","","test_mss_people_read_the_report","
+"skipped","Thu Sep 29 17:21:52 CST 2022","Thu Sep 29 17:21:52 CST 2022","0","testcase.test_mss.test_mss_data_subscription","test_data_subscription","TestDataSubscription","","","test_mss_people_read_the_report","
         人读报告-应急漏洞报告发送
         :param login_mss: token值
         :return:
         "
-"failed","Wed Sep 28 11:12:32 CST 2022","Wed Sep 28 11:12:32 CST 2022","77","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_report[date0]","
-        服务报告-生成报告
+"passed","Thu Sep 29 17:21:52 CST 2022","Thu Sep 29 17:21:53 CST 2022","305","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_and_delete_report[date3]","
+        1.生成周报、月报、漏洞管理、暴露面检测报告
+        2.查询生成报告成功
+        3.删除报告
+        4.校验报告删除成功
         :param login_mss: token值
         :return:
         "
-"failed","Wed Sep 28 11:12:32 CST 2022","Wed Sep 28 11:12:32 CST 2022","47","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_report[date1]","
-        服务报告-生成报告
+"passed","Thu Sep 29 17:21:52 CST 2022","Thu Sep 29 17:21:52 CST 2022","199","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_and_delete_report[date0]","
+        1.生成周报、月报、漏洞管理、暴露面检测报告
+        2.查询生成报告成功
+        3.删除报告
+        4.校验报告删除成功
+        :param login_mss: token值
+        :return:
+        "
+"passed","Thu Sep 29 17:21:52 CST 2022","Thu Sep 29 17:21:52 CST 2022","269","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_and_delete_report[date2]","
+        1.生成周报、月报、漏洞管理、暴露面检测报告
+        2.查询生成报告成功
+        3.删除报告
+        4.校验报告删除成功
+        :param login_mss: token值
+        :return:
+        "
+"passed","Thu Sep 29 17:21:58 CST 2022","Thu Sep 29 17:21:58 CST 2022","91","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_edit_subscribe_report","
+        1.生成订阅报告
+        2.编辑订阅报告
+        3.校验编辑成功
+        4.删除报告
+        :param add_and_delete_subscribe_report: 新增订阅报告的id值
+        :param login_mss: token值
+        :return:
+        "
+"passed","Thu Sep 29 17:21:52 CST 2022","Thu Sep 29 17:21:52 CST 2022","231","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_creat_and_delete_report[date1]","
+        1.生成周报、月报、漏洞管理、暴露面检测报告
+        2.查询生成报告成功
+        3.删除报告
+        4.校验报告删除成功
+        :param login_mss: token值
+        :return:
+        "
+"passed","Thu Sep 29 17:21:58 CST 2022","Thu Sep 29 17:21:58 CST 2022","66","testcase.test_mss.test_mss_report_center","test_report_center_service_report","TestReportCenterServiceReport","","","test_mss_service_report_add_and_delete_subscribe_report","
+        1.生成订阅报告
+        2.列表校验报告新增成功
+        3.删除报告
+        :param add_and_delete_subscribe_report: 新增订阅报告的id值
         :param login_mss: token值
         :return:
         "

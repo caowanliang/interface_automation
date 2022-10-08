@@ -1,1 +1,0 @@
-[2022-09-28 11:12:32,228]-log.py]-INFO:列表返回结果：{'errorCode': 20000, 'message': '测试单位001等客户单位无正式合同且无授权文件', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}

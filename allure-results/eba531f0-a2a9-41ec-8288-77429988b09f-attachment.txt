@@ -1,2 +1,0 @@
-DEBUG    urllib3.connectionpool:connectionpool.py:456 http://10.50.27.166:80 "POST /apiMSS/subscription-service/api/subscription/service/history/report/record/create HTTP/1.1" 200 None
-INFO     root:log.py:40 列表返回结果：{'errorCode': 20000, 'message': '分布式锁添加出现错误', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}

@@ -1,0 +1,21 @@
+{
+    "tenantId": "65089721",
+    "assetName": "被修改的名称",
+    "serverTypes": [
+        "THREAT_DETECTION_AND_RESPONSE_SERVICES"
+    ],
+    "level": "normal",
+    "serviceRangeType": "OUT_SERVICE",
+    "exposed": false,
+    "assetType": "MAIN_ENGINE",
+    "address": "10.50.27.199",
+    "ipv6": false,
+    "networkType": "INTERNET",
+    "networkId": -1,
+    "tags": [],
+    "typeId": 100,
+    "linkEquipmentList": [],
+    "operateLinkAsset": true,
+    "list": [],
+    "id": 322
+}

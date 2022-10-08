@@ -1,0 +1,18 @@
+{
+  "tenantId":"65089721",
+  "assetName":"自动新增的资产",
+  "serverTypes":["THREAT_DETECTION_AND_RESPONSE_SERVICES","VULNERABILITY_SCANNING","INTERNET_EXPOSURE_DETECTION"],
+  "level":"core",
+  "serviceRangeType":"OUT_SERVICE",
+  "exposed":false,
+  "assetType":"MAIN_ENGINE",
+  "address":"10.50.27.199",
+  "ipv6":false,
+  "networkType":"INTERNET",
+  "networkId":"",
+  "tags":[],
+  "typeId":7,
+  "linkEquipmentList":[],
+  "operateLinkAsset":true,
+  "list":[]
+}

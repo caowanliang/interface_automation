@@ -1,0 +1,29 @@
+{
+    "id": "317",
+    "reportName": "DAS-MSS-安全托管服务MSS周报_测试已开始单位客户",
+    "reportTypeCode": "1",
+    "typeName": "安全托管服务MSS周报",
+    "sendTimePrefix": "1",
+    "sendTime": "08:00:00",
+    "fileType": "pdf",
+    "sendWay": "0",
+    "notifyOperator": 1,
+    "enable": "0",
+    "enableCheck": "0",
+    "customerUnitName": "测试已开始单位",
+    "customerUnitId": "65089721",
+    "createTime": "2022-09-29 14:01:27",
+    "updateTime": "2022-09-29 14:02:40",
+    "createUserId": "32160478",
+    "createUserName": "开发人员-丘小燕",
+    "receiver": [
+        {
+            "receiverId": "36729051",
+            "receiverName": "曹万亮",
+            "isPublicNumber": true,
+            "isEmail": true,
+            "customerUnitName": "测试已开始单位",
+            "customerUnitId": "65089721"
+        }
+    ]
+}

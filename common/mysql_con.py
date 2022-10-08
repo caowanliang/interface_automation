@@ -5,16 +5,15 @@
 # @File  : mysql_con.py
 # !@Desc : 数据库连接池相关
 
-
 import pymysql
 from dbutils.pooled_db import PooledDB
-import logging
+from common.log import Log
 import configparser
 
 # 读取数据库配置信息
-
+log = Log()
 config = configparser.ConfigParser()
-config.read('/Users/caowanliang/Mss_Interface_Automation/config/config.ini', encoding='UTF-8')
+config.read('/Users/caowanliang/mss_interface_automation/config/config.ini', encoding='UTF-8')
 sections = config.sections()
 # 数据库工厂
 dbFactory = {}
@@ -52,7 +51,7 @@ class MySQLConnection(object):
     def __init__(self, dbName="master"):
         self.connect = dbFactory[dbName].connection()
         self.cursor = self.connect.cursor()
-        logging.debug("获取数据库连接对象成功,连接池对象:{}".format(str(self.connect)))
+        log.debug("获取数据库连接对象成功,连接池对象:{}".format(str(self.connect)))
 
     def execute(self, sql, param=None):
         """
@@ -62,14 +61,19 @@ class MySQLConnection(object):
         :return: 受影响的行数
         """
         ret = None
+        log.info('param：{}'.format(param))
         try:
             if param == None:
                 ret = self.cursor.execute(sql)
+                log.info('sql：{}'.format(sql))
+                log.info('影响的行数：{}'.format(ret))
             else:
                 ret = self.cursor.execute(sql, param)
+                log.info('sql：{}'.format(sql))
+                log.info('影响的行数：{}'.format(ret))
         except TypeError as te:
-            logging.debug("类型错误")
-            logging.exception(te)
+            log.debug("类型错误")
+            log.warning(te)
         return ret
 
     def query(self, sql, param=None):
@@ -106,7 +110,7 @@ class MySQLConnection(object):
         :return:
         """
         count_sql = "select count(*) ct from (" + sql + ") tmp "
-        logging.debug("统计SQL:{}".format(sql))
+        log.debug("统计SQL:{}".format(sql))
         count_num = self.count(count_sql, param)
         offset = (current_page - 1) * page_size
         total_page = int(count_num / page_size)
@@ -114,7 +118,7 @@ class MySQLConnection(object):
             total_page = total_page + 1
         pagination = {"current_page": current_page, "page_size": page_size, "count": count_num, "total_page": total_page}
         query_sql = "select * from (" + sql + ") tmp limit %s,%s"
-        logging.debug("查询SQL:{}".format(query_sql))
+        log.debug("查询SQL:{}".format(query_sql))
         # 判断是否有参数
         if param == None:
             # 无参数
@@ -172,6 +176,7 @@ class MySQLConnection(object):
         :param param: 参数
         :return: 受影响的行数
         """
+        log.info('更新sql：{}'.format(sql))
         return self.execute(sql, param)
 
     def delete(self, sql, param=None):
@@ -181,6 +186,7 @@ class MySQLConnection(object):
         :param param: 参数
         :return: 受影响的行数
         """
+        log.info('删除sql：{}'.format(sql))
         return self.execute(sql, param)
 
     def batch(self, sql, param=None):
@@ -200,6 +206,7 @@ class MySQLConnection(object):
         """
         if param == None:
             self.connect.commit()
+            log.info('提交sql事务')
         else:
             self.connect.rollback()
 
@@ -212,7 +219,7 @@ class MySQLConnection(object):
             self.cursor.close()
         if self.connect:
             self.connect.close()
-        logging.debug("释放数据库连接")
+        log.debug("释放数据库连接")
         return None
 
 

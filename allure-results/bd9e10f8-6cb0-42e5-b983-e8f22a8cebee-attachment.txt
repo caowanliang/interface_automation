@@ -1,0 +1,15 @@
+[2022-09-29 17:21:53,269]-log.py]-INFO:生成月报返回结果：{'errorCode': 0, 'message': 'RESPONSE_OK', 'responseCode': 'OK', 'other': None, 'data': ['21184'], 'success': True}
+[2022-09-29 17:21:53,321]-log.py]-INFO:发送报告返回结果：{'errorCode': 20000, 'message': '此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}
+[2022-09-29 17:21:53,325]-log.py]-WARNING:函数test_mss_service_report_send_mouth_report失败的AssertionError(assert '此状态下的报告不允许执行...作状态为:未推送/推送失败' == 'RESPONSE_OK'
+  - RESPONSE_OK
+  + 此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败)。将在1秒(s)内重试.
+[2022-09-29 17:21:54,400]-log.py]-INFO:发送报告返回结果：{'errorCode': 20000, 'message': '此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}
+[2022-09-29 17:21:54,402]-log.py]-WARNING:函数test_mss_service_report_send_mouth_report失败的AssertionError(assert '此状态下的报告不允许执行...作状态为:未推送/推送失败' == 'RESPONSE_OK'
+  - RESPONSE_OK
+  + 此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败)。将在2秒(s)内重试.
+[2022-09-29 17:21:57,425]-log.py]-INFO:发送报告返回结果：{'errorCode': 20000, 'message': '网络错误导致邮件发送失败 ', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}
+[2022-09-29 17:21:57,426]-log.py]-WARNING:函数test_mss_service_report_send_mouth_report失败的AssertionError(assert '网络错误导致邮件发送失败 ' == 'RESPONSE_OK'
+  - RESPONSE_OK
+  + 网络错误导致邮件发送失败 )。将在1秒(s)内重试.
+[2022-09-29 17:21:58,539]-log.py]-INFO:发送报告返回结果：{'errorCode': 20000, 'message': '网络错误导致邮件发送失败 ', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}
+[2022-09-29 17:21:58,540]-log.py]-WARNING:在3次重试后，函数test_mss_service_report_send_mouth_report失败. Exceptions: [AssertionError("assert '此状态下的报告不允许执行...作状态为:未推送/推送失败' == 'RESPONSE_OK'\n  - RESPONSE_OK\n  + 此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败"), AssertionError("assert '此状态下的报告不允许执行...作状态为:未推送/推送失败' == 'RESPONSE_OK'\n  - RESPONSE_OK\n  + 此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败"), AssertionError("assert '网络错误导致邮件发送失败 ' == 'RESPONSE_OK'\n  - RESPONSE_OK\n  + 网络错误导致邮件发送失败 "), AssertionError("assert '网络错误导致邮件发送失败 ' == 'RESPONSE_OK'\n  - RESPONSE_OK\n  + 网络错误导致邮件发送失败 ")]

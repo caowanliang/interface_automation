@@ -1,0 +1,27 @@
+{
+    "customer":[{
+        "customerUnitId":"65089721",
+        "customerUnitName":"测试已开始单位",
+        "receiver":[{
+            "userId":"36729051",
+            "userName":"曹万亮",
+            "isPublicNumber":"true",
+            "isEmail":"true",
+            "receiverId":"36729051",
+            "receiverName":"曹万亮",
+            "customerUnitName":"测试已开始单位",
+            "customerUnitId":"65089721"
+        }],
+        "reportName":"DAS-MSS-安全托管服务MSS月报_测试已开始单位客户",
+        "taskStatus":5,
+        "notContractAndNotAuthFile":"false"
+    }],
+    "fileType":"word",
+    "sendTimePrefix":"01",
+    "sendTime":"8:00:00",
+    "reportTypeCode":"2",
+    "enableCheck":"1",
+    "enable":"1",
+    "reportName":"",
+    "sendWay":"0"
+}

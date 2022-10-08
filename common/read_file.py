@@ -7,7 +7,7 @@
 import os
 import xlrd
 import yaml
-from comm.log import Log
+from common.log import Log
 
 
 class ReadFile(object):

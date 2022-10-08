@@ -1,0 +1,14 @@
+{
+  "pageSize":10,
+  "pageNumber":1,
+  "tenantId":"65089721",
+  "tenantName":"测试已开始单位",
+  "keyword":null,
+  "level":null,
+  "serviceRangeType":null,
+  "securityAreaId":null,
+  "networkTypes":null,
+  "bindLinkAsset":null,
+  "bindAiGent":null,
+  "serverTypes":[]
+}

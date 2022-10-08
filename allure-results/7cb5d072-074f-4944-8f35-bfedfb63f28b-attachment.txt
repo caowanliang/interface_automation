@@ -1,0 +1,20 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://10.50.27.166:80 "POST /apiMSS/subscription-service/api/subscription/service/history/report/record/create HTTP/1.1" 200 None
+INFO     root:log.py:40 生成月报返回结果：{'errorCode': 0, 'message': 'RESPONSE_OK', 'responseCode': 'OK', 'other': None, 'data': ['21184'], 'success': True}
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://10.50.27.166:80 "GET /apiMSS/subscription-service/api/subscription/service/history/report/record/sendReport?id=21184 HTTP/1.1" 200 None
+INFO     root:log.py:40 发送报告返回结果：{'errorCode': 20000, 'message': '此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}
+WARNING  root:log.py:44 函数test_mss_service_report_send_mouth_report失败的AssertionError(assert '此状态下的报告不允许执行...作状态为:未推送/推送失败' == 'RESPONSE_OK'
+  - RESPONSE_OK
+  + 此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败)。将在1秒(s)内重试.
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://10.50.27.166:80 "GET /apiMSS/subscription-service/api/subscription/service/history/report/record/sendReport?id=21184 HTTP/1.1" 200 None
+INFO     root:log.py:40 发送报告返回结果：{'errorCode': 20000, 'message': '此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}
+WARNING  root:log.py:44 函数test_mss_service_report_send_mouth_report失败的AssertionError(assert '此状态下的报告不允许执行...作状态为:未推送/推送失败' == 'RESPONSE_OK'
+  - RESPONSE_OK
+  + 此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败)。将在2秒(s)内重试.
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://10.50.27.166:80 "GET /apiMSS/subscription-service/api/subscription/service/history/report/record/sendReport?id=21184 HTTP/1.1" 200 None
+INFO     root:log.py:40 发送报告返回结果：{'errorCode': 20000, 'message': '网络错误导致邮件发送失败 ', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}
+WARNING  root:log.py:44 函数test_mss_service_report_send_mouth_report失败的AssertionError(assert '网络错误导致邮件发送失败 ' == 'RESPONSE_OK'
+  - RESPONSE_OK
+  + 网络错误导致邮件发送失败 )。将在1秒(s)内重试.
+DEBUG    urllib3.connectionpool:connectionpool.py:456 http://10.50.27.166:80 "GET /apiMSS/subscription-service/api/subscription/service/history/report/record/sendReport?id=21184 HTTP/1.1" 200 None
+INFO     root:log.py:40 发送报告返回结果：{'errorCode': 20000, 'message': '网络错误导致邮件发送失败 ', 'responseCode': 'BusinessException', 'other': None, 'data': None, 'success': False}
+WARNING  root:log.py:44 在3次重试后，函数test_mss_service_report_send_mouth_report失败. Exceptions: [AssertionError("assert '此状态下的报告不允许执行...作状态为:未推送/推送失败' == 'RESPONSE_OK'\n  - RESPONSE_OK\n  + 此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败"), AssertionError("assert '此状态下的报告不允许执行...作状态为:未推送/推送失败' == 'RESPONSE_OK'\n  - RESPONSE_OK\n  + 此状态下的报告不允许执行该操作，允许的操作状态为:未推送/推送失败"), AssertionError("assert '网络错误导致邮件发送失败 ' == 'RESPONSE_OK'\n  - RESPONSE_OK\n  + 网络错误导致邮件发送失败 "), AssertionError("assert '网络错误导致邮件发送失败 ' == 'RESPONSE_OK'\n  - RESPONSE_OK\n  + 网络错误导致邮件发送失败 ")]

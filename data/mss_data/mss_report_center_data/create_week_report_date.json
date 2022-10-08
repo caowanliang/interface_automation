@@ -1,0 +1,18 @@
+[{
+        "tenantId":"65089721",
+        "tenantName":"测试已开始单位",
+        "userInfoRequestList":
+            [{"userId":"36729051",
+              "userName":"曹万亮",
+              "isPublicNumber":"true",
+              "isEmail":"true",
+              "tenantName":"测试已开始单位",
+              "tenantId":"65089721"}],
+        "statisticsStartTime":"2022-09-19",
+        "statisticsEndTime":"2022-09-25",
+        "reportFileType":"pdf",
+        "typeId":"1",
+        "typeName":"安全托管服务MSS周报",
+        "reportName":"DAS-MSS-安全托管服务MSS周报_测试已开始单位客户_2022-09-19至2022-09-25",
+        "reportSendModeCodes":["1"]
+    }]
