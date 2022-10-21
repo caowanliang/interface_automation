@@ -1,5 +1,5 @@
 MSS:
-    host: 'http://10.50.27.166'
+    host: ''
     headers:
         Content-Type: 'application/json'
         Authorization: 'token'

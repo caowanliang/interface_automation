@@ -85,7 +85,7 @@ def add_and_delete_subscribe_report(login_mss):
     # 删除订阅报告
     api_date = to_obtain_url_param_method(saas_type='MSS', api_name='report_subscribe_delete', api='api', token=login_mss)
     report_delete_result = mss_request.run_main(method=api_date['method'], url=api_date['url'], json={'ids': [add_subscribe_report_result.json()['data'][0], ]}, headers=api_date['headers'])
-    log.info("删除报告结果：{}".format(report_delete_result.json()))
+    log.info("删除订阅报告结果：{}".format(report_delete_result.json()))
 
 
 @pytest.fixture(scope="function")

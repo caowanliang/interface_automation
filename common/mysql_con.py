@@ -4,6 +4,7 @@
 # @Author: william.cao
 # @File  : mysql_con.py
 # !@Desc : 数据库连接池相关
+import os
 
 import pymysql
 from dbutils.pooled_db import PooledDB
@@ -13,7 +14,9 @@ import configparser
 # 读取数据库配置信息
 log = Log()
 config = configparser.ConfigParser()
-config.read('/Users/caowanliang/mss_interface_automation/config/config.ini', encoding='UTF-8')
+root_dir = os.path.dirname(os.path.dirname(__file__))  # 获取当前文件所在目录
+config_dir = os.path.join(root_dir, 'config', 'config.ini')  # 组装config.ini路径，也可以直接写配置文件的具体路径，不用自动获取
+config.read(config_dir, encoding='UTF-8')
 sections = config.sections()
 # 数据库工厂
 dbFactory = {}
